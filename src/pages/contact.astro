@@ -1,0 +1,75 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import HeroText from '~/components/widgets/HeroText.astro';
+import ContactUs from '~/components/widgets/Contact.astro';
+import Features2 from '~/components/widgets/Features2.astro';
+
+const metadata = {
+  title: 'Kapcsolat',
+};
+
+// TODO: cseréld ki egy valódi, ingyenes Web3Forms kulcsra: https://web3forms.com
+const WEB3FORMS_ACCESS_KEY = 'REPLACE_WITH_WEB3FORMS_ACCESS_KEY';
+---
+
+<Layout metadata={metadata}>
+  <!-- HeroText Widget ******************* -->
+
+  <HeroText tagline="Kapcsolat" title="Írj, és beszéljünk" />
+
+  <ContactUs
+    id="form"
+    title="Írj nekem!"
+    subtitle="Töltsd ki az alábbi űrlapot, és 1-2 munkanapon belül válaszolok az ingyenes konzultáció időpontjának egyeztetésével."
+    action={`https://api.web3forms.com/submit`}
+    hidden={{
+      access_key: WEB3FORMS_ACCESS_KEY,
+      subject: 'Új üzenet a kocsistibor.hu weboldalról',
+      redirect: '/koszonjuk',
+    }}
+    inputs={[
+      {
+        type: 'text',
+        name: 'name',
+        label: 'Név',
+      },
+      {
+        type: 'email',
+        name: 'email',
+        label: 'E-mail cím',
+      },
+    ]}
+    textarea={{
+      label: 'Üzenet',
+    }}
+    disclaimer={{
+      label: 'Az üzenet elküldésével hozzájárulsz a megadott személyes adataid kezeléséhez a válaszadás céljából.',
+    }}
+    button="Üzenet elküldése"
+    description="Munkanapokon 1-2 napon belül válaszolok."
+  />
+
+  <!-- Features2 Widget ************** -->
+
+  <Features2
+    title="Elérhetőségeink"
+    columns={3}
+    items={[
+      {
+        title: 'E-mail',
+        description: 'info@kocsistibor.hu',
+        icon: 'tabler:mail',
+      },
+      {
+        title: 'Telefon',
+        description: 'Hamarosan',
+        icon: 'tabler:phone',
+      },
+      {
+        title: 'Székhely',
+        description: 'Budapest, Magyarország',
+        icon: 'tabler:map-pin',
+      },
+    ]}
+  />
+</Layout>

@@ -1,0 +1,201 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+
+import Hero from '~/components/widgets/Hero.astro';
+import Features from '~/components/widgets/Features.astro';
+import Content from '~/components/widgets/Content.astro';
+import Steps from '~/components/widgets/Steps.astro';
+import Stats from '~/components/widgets/Stats.astro';
+import FAQs from '~/components/widgets/FAQs.astro';
+import CallToAction from '~/components/widgets/CallToAction.astro';
+
+const metadata = {
+  title: 'Tibi — pénzügyi tanácsadás forexben, befektetésben, vállalati pénzügyekben',
+  ignoreTitleTemplate: true,
+};
+---
+
+<Layout metadata={metadata}>
+  <!-- Hero Widget ******************* -->
+
+  <Hero
+    actions={[
+      { variant: 'primary', text: 'Beszéljünk', href: '/contact' },
+      { text: 'Mivel tudok segíteni', href: '/services' },
+    ]}
+    image={{ src: '~/assets/images/hero-image.png', alt: 'Pénzügyi tanácsadás' }}
+  >
+    <Fragment slot="title">
+      Szia, <span class="text-accent dark:text-white">Tibi vagyok</span>
+    </Fragment>
+
+    <Fragment slot="subtitle">
+      18+ év banki és pénzügyi vezetői tapasztalattal segítek neked és a cégednek eligazodni a devizapiacon, a
+      befektetési döntésekben és a vállalati pénzügyekben — közérthetően, felesleges szakzsargon nélkül.
+    </Fragment>
+  </Hero>
+
+  <!-- Features Widget *************** -->
+
+  <Features
+    id="features"
+    tagline="Miért én"
+    title="Banki háttér, gyakorlatias fejjel"
+    subtitle="Nem elméletből tanultam a pénzügyeket — másfél évtizedet töltöttem bankvezetőként, mielőtt saját tanácsadói praxist indítottam."
+    items={[
+      {
+        title: 'Bizonyított banki háttér',
+        description:
+          '11+ évet dolgoztam az MKB Banknál (üzletfejlesztés, üzleti elemzés, termékmenedzsment vezetőként), majd 6 évet a Providentnél pénzügyi termékfejlesztési vezetőként.',
+        icon: 'tabler:building-bank',
+      },
+      {
+        title: 'Deviza- és forexkockázat',
+        description: 'Átlátom a devizakitettséged, és megmutatom, hol és hogyan érdemes kockázatot kezelni.',
+        icon: 'tabler:currency-dollar',
+      },
+      {
+        title: 'Befektetési tanácsadás',
+        description: 'Testreszabott stratégia a kockázati profilodhoz — akár cégként, akár magánszemélyként kérsz segítséget.',
+        icon: 'tabler:chart-line',
+      },
+      {
+        title: 'Termék- és folyamatszemlélet',
+        description: 'Éveken át pénzügyi termékek fejlesztését vezettem — ez segít a te folyamataidat is átláthatóbbá tenni.',
+        icon: 'tabler:settings-automation',
+      },
+      {
+        title: 'Személyes kapcsolat',
+        description: 'Nincs call center, nincs sablonos ajánlat — velem közvetlenül beszélsz, végig.',
+        icon: 'tabler:users',
+      },
+      {
+        title: 'Átláthatóság',
+        description: 'Mindig érthetően elmagyarázom, mi miért javaslat — rejtett költség és apró betű nélkül.',
+        icon: 'tabler:eye-check',
+      },
+    ]}
+  />
+
+  <!-- Content Widget **************** -->
+
+  <Content
+    isReversed
+    tagline="Szakmai háttér"
+    title="18+ év a pénzügyi szektorban"
+    items={[
+      {
+        title: 'MKB Bank — 11 év 7 hónap',
+        description: 'Supervisor → Participation Manager → Head of Business Analysis → Head of Product Management, 2006-tól 2017-ig.',
+      },
+      {
+        title: 'Provident Pénzügyi Zrt. — 6 év 4 hónap',
+        description: 'Head of Product Development, 2018-tól 2024-ig.',
+      },
+      {
+        title: 'Budapesti Gazdasági Egyetem',
+        description: 'A pénzügyi és üzleti alapok, amikre a mai tanácsadói munkám épül.',
+      },
+    ]}
+    image={{ src: '~/assets/images/default.png', alt: 'Tibi szakmai háttere' }}
+  >
+    <Fragment slot="content">
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Nem elméletből, gyakorlatból</h3>
+      Vezetői pozíciókban dolgoztam a hazai banki szektor élvonalában, mielőtt elindítottam a saját tanácsadói praxisomat.
+    </Fragment>
+  </Content>
+
+  <!-- Steps Widget ****************** -->
+
+  <Steps
+    title="Így dolgozunk együtt"
+    items={[
+      {
+        title: 'Beszélgetünk <span class="font-medium">egyet</span>',
+        description: 'Ingyenes, kötelezettségmentes első hívás arról, hol állsz, és mire van szükséged.',
+        icon: 'tabler:message-circle',
+      },
+      {
+        title: 'Átnézem <span class="font-medium">a helyzetedet</span>',
+        description: 'Pénzügyi helyzet, devizakitettség, kockázati profil — konkrét javaslatokkal jövök.',
+        icon: 'tabler:chart-dots',
+      },
+      {
+        title: 'Segítek <span class="font-medium">megvalósítani</span>',
+        description: 'Gyakorlati támogatás a döntések végrehajtásában, partnerekkel és folyamatokkal.',
+        icon: 'tabler:checklist',
+      },
+      {
+        title: 'Ott vagyok <span class="font-medium">utána is</span>',
+        icon: 'tabler:refresh',
+      },
+    ]}
+    image={{ src: '~/assets/images/hero-image.png', alt: 'Együttműködés lépései' }}
+  />
+
+  <!-- Stats Widget ****************** -->
+
+  <Stats
+    stats={[
+      { title: 'Év a pénzügyi szektorban', amount: '18+' },
+      { title: 'Év bankvezetői szerepben', amount: '11+' },
+      { title: 'Év termékfejlesztési vezetőként', amount: '6+' },
+      { title: 'Sablonos ajánlat', amount: '0' },
+    ]}
+  />
+
+  <!-- FAQs Widget ******************* -->
+
+  <FAQs
+    title="Amit sokan megkérdeznek"
+    subtitle="Mielőtt írnál, nézd át — talán már itt megtalálod a választ."
+    tagline="GYIK"
+    classes={{ container: 'max-w-6xl' }}
+    items={[
+      {
+        title: 'Kiknek szól ez?',
+        description:
+          'Kis- és középvállalatoknak, akiknek devizás bevétele, kiadása vagy befektetési döntése van, és magánszemélyeknek, akik átgondolt pénzügyi tanácsot keresnek.',
+      },
+      {
+        title: 'Milyen témákban segítek?',
+        description:
+          'Devizakockázat-kezelés (forex), befektetési döntések előkészítése, vállalati pénzügyi folyamatok és termékek átvilágítása, banki kapcsolatok optimalizálása.',
+      },
+      {
+        title: 'Te kezeled a pénzemet / vagyonomat?',
+        description:
+          'Igen, ha ezt szeretnéd — az elemzésen és tanácsadáson túl MNB-engedéllyel* közvetlen vagyon- és eszközkezelést is vállalok, meghatalmazás alapján. Ha inkább csak tanácsot szeretnél és magad hoznád meg a döntést, az is megoldható.',
+      },
+      {
+        title: 'Mennyi idő alatt kapok visszajelzést?',
+        description: 'Az első beszélgetést jellemzően 1-2 munkanapon belül egyeztetjük.',
+      },
+      {
+        title: 'Csak magyar cégekkel dolgozol?',
+        description: 'Elsősorban igen, de egyedi esetben nemzetközi ügyfeleknek is szoktam segíteni.',
+      },
+    ]}
+  />
+
+  <p class="text-sm text-center text-gray-500 dark:text-gray-400 max-w-3xl mx-auto px-4">
+    *A vagyon- és eszközkezelési engedély adatai az <a href="/impresszum" class="underline">impresszumban</a>{' '}
+    találhatók.
+  </p>
+
+  <!-- CallToAction Widget *********** -->
+
+  <CallToAction
+    actions={[
+      {
+        variant: 'primary',
+        text: 'Írj, beszéljünk',
+        href: '/contact',
+      },
+    ]}
+  >
+    <Fragment slot="title">Beszéljünk a pénzügyeidről</Fragment>
+
+    <Fragment slot="subtitle">Az első beszélgetés ingyenes és semmire nem köt.</Fragment>
+  </CallToAction>
+</Layout>

@@ -1,0 +1,28 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import HeroText from '~/components/widgets/HeroText.astro';
+
+const metadata = {
+  title: 'Impresszum',
+};
+
+// TODO: minden alábbi adatot tölts ki valós céginformációval, mielőtt élesbe megy az oldal.
+// Ez törvényi kötelezettség (Elker tv.), vagyon-/eszközkezelési tevékenységnél pedig
+// az MNB engedélyszám feltüntetése is elvárás.
+---
+
+<Layout metadata={metadata}>
+  <HeroText tagline="Impresszum" title="Cégadatok és engedélyek" />
+
+  <div class="max-w-3xl mx-auto px-4 pb-16 prose dark:prose-invert">
+    <ul>
+      <li><strong>Szolgáltató neve:</strong> TODO — cég/egyéni vállalkozás pontos jogi neve</li>
+      <li><strong>Székhely:</strong> TODO</li>
+      <li><strong>Cégjegyzékszám / nyilvántartási szám:</strong> TODO</li>
+      <li><strong>Adószám:</strong> TODO</li>
+      <li><strong>MNB engedély száma (vagyon- és eszközkezelési tevékenységhez):</strong> TODO</li>
+      <li><strong>E-mail:</strong> info@kocsistibor.hu</li>
+      <li><strong>Panaszkezelés / felügyeleti szerv:</strong> Magyar Nemzeti Bank (MNB), TODO — ügyfélszolgálati elérhetőség</li>
+    </ul>
+  </div>
+</Layout>

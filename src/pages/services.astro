@@ -1,0 +1,140 @@
+---
+import CallToAction from '~/components/widgets/CallToAction.astro';
+import Content from '~/components/widgets/Content.astro';
+import Features2 from '~/components/widgets/Features2.astro';
+import Hero from '~/components/widgets/Hero.astro';
+import Layout from '~/layouts/PageLayout.astro';
+
+const metadata = {
+  title: 'Szolgáltatások',
+};
+---
+
+<Layout metadata={metadata}>
+  <!-- Hero Widget ******************* -->
+
+  <Hero
+    tagline="Szolgáltatások"
+    title="Pénzügyi tanácsadás négy területen"
+    subtitle="Devizakockázat, befektetési döntések, vállalati pénzügyek és pénzügyi folyamatfejlesztés — mindegyik testreszabva az Ön helyzetére."
+    actions={[{ variant: 'primary', text: 'Konzultációt kérek', href: '/contact' }]}
+    image={{ src: '~/assets/images/hero-image.png', alt: 'Szolgáltatásaink' }}
+  />
+
+  <!-- Features2 Widget ************** -->
+
+  <Features2
+    id="forex"
+    title="Deviza- és forexkockázat kezelés"
+    tagline="01"
+    columns={1}
+    items={[
+      {
+        title: 'Mit jelent ez a gyakorlatban',
+        description:
+          'Deviza bevétellel vagy kiadással rendelkező vállalatoknak segítek felmérni és kezelni az árfolyamkockázatot: mikor és hogyan érdemes fedezni a kitettséget, milyen eszközök állnak rendelkezésre, és hogyan illeszthető ez a cég pénzügyi tervezésébe.',
+        icon: 'tabler:currency-dollar',
+      },
+    ]}
+  />
+
+  <!-- Features2 Widget ************** -->
+
+  <Features2
+    id="befektetes"
+    title="Befektetési tanácsadás és vagyonkezelés"
+    tagline="02"
+    columns={1}
+    isDark={false}
+    items={[
+      {
+        title: 'Mit jelent ez a gyakorlatban',
+        description:
+          'Segítek átlátni a befektetési lehetőségeket, felmérni a kockázati profilt, és felállítani egy hozzád illő stratégiát. MNB-engedéllyel* meghatalmazás alapján a tényleges vagyon- és eszközkezelést is közvetlenül vállalom — ha inkább csak tanácsot kérsz és magad döntenél, az is megoldható.',
+        icon: 'tabler:chart-line',
+      },
+    ]}
+  />
+
+  <!-- Features2 Widget ************** -->
+
+  <Features2
+    id="vallalati"
+    title="Vállalati pénzügyi tanácsadás"
+    tagline="03"
+    columns={1}
+    items={[
+      {
+        title: 'Mit jelent ez a gyakorlatban',
+        description:
+          'Vállalati pénzgazdálkodás, likviditáskezelés, banki kapcsolatok és finanszírozási struktúra átvilágítása — 11+ év banki vezetői tapasztalattal a háttérben, amely ismeri a bankok oldalát is.',
+        icon: 'tabler:building-bank',
+      },
+    ]}
+  />
+
+  <!-- Features2 Widget ************** -->
+
+  <Features2
+    id="folyamat"
+    title="Pénzügyi folyamat- és termékfejlesztés"
+    tagline="04"
+    columns={1}
+    items={[
+      {
+        title: 'Mit jelent ez a gyakorlatban',
+        description:
+          'Pénzügyi termékek és belső folyamatok átvilágítása, egyszerűsítése és fejlesztése — abból a szemléletből, amit évekig vezetőként alkalmaztam pénzügyi termékfejlesztésben.',
+        icon: 'tabler:settings-automation',
+      },
+    ]}
+  />
+
+  <!-- Content Widget **************** -->
+
+  <Content
+    isReversed
+    tagline="Miért érdemes velünk dolgozni"
+    items={[
+      {
+        title: 'Banki oldalról is ismerem a folyamatokat',
+        description: '11+ év vezetői tapasztalat az MKB Banknál — pontosan tudom, hogyan gondolkodik egy bank.',
+        icon: 'tabler:building-bank',
+      },
+      {
+        title: 'Nincs sablonos ajánlat',
+        description: 'Minden javaslat az Ön konkrét helyzetére épül, nem egy általános portfólióra.',
+        icon: 'tabler:adjustments',
+      },
+      {
+        title: 'Átlátható együttműködés',
+        description: 'Mindig tudni fogja, min dolgozunk, miért, és mi a következő lépés.',
+        icon: 'tabler:eye-check',
+      },
+    ]}
+    image={{ src: '~/assets/images/default.png', alt: 'Együttműködés' }}
+  >
+    <Fragment slot="content">
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Nem elméletből, gyakorlatból</h3>
+    </Fragment>
+  </Content>
+
+  <p class="text-sm text-center text-gray-500 dark:text-gray-400 max-w-3xl mx-auto px-4">
+    *A vagyon- és eszközkezelési engedély adatai az <a href="/impresszum" class="underline">impresszumban</a>{' '}
+    találhatók.
+  </p>
+
+  <!-- CallToAction Widget *********** -->
+
+  <CallToAction
+    actions={[
+      {
+        variant: 'primary',
+        text: 'Ingyenes konzultációt kérek',
+        href: '/contact',
+      },
+    ]}
+    title="Kezdjük egy beszélgetéssel"
+    subtitle="Az első konzultáció ingyenes — mérjük fel együtt, miben tudok segíteni."
+  />
+</Layout>

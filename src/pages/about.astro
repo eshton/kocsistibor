@@ -1,0 +1,132 @@
+---
+import Features2 from '~/components/widgets/Features2.astro';
+import Hero from '~/components/widgets/Hero.astro';
+import Steps2 from '~/components/widgets/Steps2.astro';
+import Stats from '~/components/widgets/Stats.astro';
+import Layout from '~/layouts/PageLayout.astro';
+
+const metadata = {
+  title: 'Rólam',
+};
+---
+
+<Layout metadata={metadata}>
+  <!-- Hero Widget ******************* -->
+
+  <Hero
+    tagline="Rólam"
+    image={{
+      src: '~/assets/images/team/kocsis-tibor.png',
+      alt: 'Kocsis Tibor, becenevén Tibi',
+    }}
+  >
+    <Fragment slot="title">
+      Kocsis Tibor vagyok, <br />
+      <span class="text-accent dark:text-white">de csak hívj Tibinek</span>
+    </Fragment>
+
+    <Fragment slot="subtitle">
+      Több mint 18 évet töltöttem a hazai banki és pénzügyi szektorban, vezetői pozíciókban — ma ezt a tapasztalatot
+      adom tovább neked, akár cégként, akár magánszemélyként keresel átgondolt pénzügyi partnert.
+    </Fragment>
+  </Hero>
+
+  <!-- Stats Widget ****************** -->
+
+  <Stats
+    title="Szakmai pályafutás számokban"
+    stats={[
+      { title: 'Év a pénzügyi szektorban', amount: '18+' },
+      { title: 'Év az MKB Banknál', amount: '11' },
+      { title: 'Év a Providentnél', amount: '6' },
+      { title: 'Vezetői pozíció', amount: '5' },
+    ]}
+  />
+
+  <!-- Steps2 Widget ****************** -->
+
+  <Steps2
+    title="Szakmai pályafutás"
+    subtitle="Banki vezetői pozícióktól a pénzügyi termékfejlesztésig — az az út, amelyen a mai tanácsadói szemléletem alakult."
+    items={[
+      {
+        title: 'Head of Product Development — Provident Pénzügyi Zrt.',
+        description: '2018. június – 2024. szeptember (6 év 4 hónap), Budapest.',
+        icon: 'tabler:briefcase',
+      },
+      {
+        title: 'Head of Product Management — MKB Bank',
+        description: '2016. szeptember – 2017. augusztus (1 év), Budapest.',
+        icon: 'tabler:building-bank',
+      },
+      {
+        title: 'Head of Business Analysis — MKB Bank',
+        description: '2014. szeptember – 2016. szeptember (2 év 1 hónap), Budapest.',
+        icon: 'tabler:chart-bar',
+      },
+      {
+        title: 'Participation Manager — MKB Bank',
+        description: '2008. július – 2014. szeptember (6 év 3 hónap), Budapest.',
+        icon: 'tabler:users-group',
+      },
+      {
+        title: 'Supervisor — MKB Bank',
+        description: '2006. február – 2008. július (2 év 6 hónap), Budapest.',
+        icon: 'tabler:user-check',
+      },
+    ]}
+  />
+
+  <!-- Stats Widget ****************** -->
+  <!-- TODO: cseréld ki valós számokra, mielőtt élesbe megy az oldal (ügyfélszám, konzultációk száma stb.) -->
+
+  <Stats
+    title="Tanácsadóként, néhány számban"
+    stats={[
+      { title: 'Ügyfél', amount: '20+' },
+      { title: 'Lezárt konzultáció', amount: '100+' },
+      { title: 'Iparág, amivel dolgoztam', amount: '5+' },
+      { title: 'Átlagos válaszidő', amount: '24 óra' },
+    ]}
+  />
+
+  <!-- Features2 Widget ************** -->
+
+  <Features2
+    title="Tanulmányok"
+    tagline="Háttér"
+    columns={1}
+    items={[
+      {
+        title: 'Budapesti Gazdasági Egyetem',
+        description: 'Pénzügyi és üzleti tanulmányok — a tanácsadói munka szakmai alapja.',
+        icon: 'tabler:school',
+      },
+    ]}
+  />
+
+  <!-- Features2 Widget ************** -->
+
+  <Features2
+    title="Amit fontosnak tartok"
+    tagline="Munkastílus"
+    columns={3}
+    items={[
+      {
+        title: 'Érthetőség',
+        description: 'Minden javaslatot közérthetően magyarázok el — döntést csak akkor lehet jól meghozni, ha tisztán látja a hátterét.',
+        icon: 'tabler:bulb',
+      },
+      {
+        title: 'Személyes felelősség',
+        description: 'Nem sablonokkal, hanem az Ön helyzetére szabott elemzéssel és javaslattal dolgozom.',
+        icon: 'tabler:shield-check',
+      },
+      {
+        title: 'Hosszú távú szemlélet',
+        description: 'A cél nem egy egyszeri tranzakció, hanem egy fenntartható pénzügyi stratégia kialakítása.',
+        icon: 'tabler:trending-up',
+      },
+    ]}
+  />
+</Layout>

@@ -1,0 +1,17 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import HeroText from '~/components/widgets/HeroText.astro';
+
+const metadata = {
+  title: 'Köszönjük',
+  robots: { index: false, follow: true },
+};
+---
+
+<Layout metadata={metadata}>
+  <HeroText
+    tagline="Köszönjük"
+    title="Megkaptuk üzenetét"
+    subtitle="1-2 munkanapon belül válaszolunk e-mailben az ingyenes konzultáció időpontjának egyeztetésével."
+  />
+</Layout>
