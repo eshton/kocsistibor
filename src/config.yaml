@@ -9,8 +9,8 @@ site:
 # Default SEO metadata
 metadata:
   title:
-    default: 💰 Kocsis Tibor Pénzügyi Tanácsadás
-    template: '%s — 💰 Kocsis Tibor'
+    default: Kocsis Tibor Pénzügyi Tanácsadás
+    template: '%s — Kocsis Tibor'
   description: 'Pénzügyi tanácsadás vállalatoknak: forex, befektetés, vállalati pénzügyek.'
   robots:
     index: true
