@@ -9,8 +9,8 @@ site:
 # Default SEO metadata
 metadata:
   title:
-    default: Kocsis Tibor Pénzügyi Tanácsadás
-    template: '%s — Kocsis Tibor'
+    default: 💰 Kocsis Tibor Pénzügyi Tanácsadás
+    template: '%s — 💰 Kocsis Tibor'
   description: 'Pénzügyi tanácsadás vállalatoknak: forex, befektetés, vállalati pénzügyek.'
   robots:
     index: true
@@ -18,7 +18,7 @@ metadata:
   openGraph:
     site_name: Kocsis Tibor Pénzügyi Tanácsadás
     images:
-      - url: '~/assets/images/default.png'
+      - url: '~/assets/images/finance-skyline.jpg'
         width: 1200
         height: 628
     type: website

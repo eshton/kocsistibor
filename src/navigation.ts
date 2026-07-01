@@ -16,6 +16,8 @@ export const headerData = {
     },
   ],
   actions: [{ text: 'Beszéljünk', href: getPermalink('/contact') }],
+  // TODO: cseréld ki valós telefonszámra, mielőtt élesbe megy az oldal.
+  phone: '+36 30 000 0000',
 };
 
 export const footerData = {
@@ -32,7 +34,7 @@ export const footerData = {
     {
       title: 'Cég',
       links: [
-        { text: 'Rólunk', href: getPermalink('/about') },
+        { text: 'Rólam', href: getPermalink('/about') },
         { text: 'Kapcsolat', href: getPermalink('/contact') },
       ],
     },
